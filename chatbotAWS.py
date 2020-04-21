@@ -389,7 +389,7 @@ def build_message_dict(message_content, content_type='PlainText'):
 
     
 if __name__ == "__main__":
-    grant_lex_lambda_permissions(boto3.client('lambda', 'us-east-1'), 'update_service_data_table')
+    grant_lex_lambda_permissions(boto3.client('lambda', 'us-east-1'), '[YOUR_LAMBDA_NAME]')
     client = boto3.client('lex-models', 'us-east-1')
     created_service_names = create_service_intents_if_not_exists(client)
     chatbot = create_bot_if_not_exists(client, 'dimbot', 'dim', created_service_names)
